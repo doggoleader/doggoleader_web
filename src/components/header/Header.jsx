@@ -1,8 +1,6 @@
 import './Header.css';
 import HeaderButton from "../buttons/headerButton/HeaderButton";
-import SelectLanguage from "../selectors/languages/SelectLanguage";
 import {useNavigate} from "react-router-dom";
-import Gallery from "../../pages/gallery/Gallery";
 import logo from "../../assets/imagies/logo_512x512.png";
 
 const Header = () => {
@@ -10,7 +8,7 @@ const Header = () => {
     const navigate = useNavigate();
 
     const toGallery = () => {
-        navigate('/gallery');
+        window.location.href = '/pages/gallery.html'; // Redirects to the Home page
     }
 
     const toPortfolio = () => {
@@ -18,7 +16,7 @@ const Header = () => {
     }
 
     const toMain = () => {
-        navigate('/');
+        window.location.href = '/index.html';
     }
 
     return (
